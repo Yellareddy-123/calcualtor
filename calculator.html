@@ -1,0 +1,76 @@
+<html>
+<head>
+<script>
+function ac(){
+document.getElementById("res").value="";
+}
+function show(input){
+document.getElementById("res").value+=input;
+}
+function cal(){
+try{
+let r=eval(document.getElementById("res").value);
+document.getElementById("res").value=r;
+}catch(error){
+document.getElementById("res").value="Error";
+}
+}
+</script>
+<style>
+button{
+background-color:red;
+color:white;
+padding:10px 20px;	
+}
+.t{
+font-size:14px;
+font-weight:bold;	
+}
+caption{
+background-color:green;
+color:white;
+font-size:20px;
+}
+table{
+border:1px solid pink;
+border-radius:5px;
+background-color:white;
+}
+</style>
+</head>
+<body align="center">
+<table border="1" cellspacing="4px" cellpadding="4px" align="center">
+<caption> Simple Calculator </caption>
+<tr>
+<td colspan="3" align="center" bgcolor="black"><input type="text" class="t" id="res"></td>
+<td><button onclick="ac()">Ac</button></td>
+</tr>
+<tr>
+<td><button onclick="show('1')">1</button></td>
+<td><button onclick="show('2')">2</button></td>
+<td><button onclick="show('3')">3</button></td>
+<td><button onclick="show('+')">+</button></td>
+</tr>
+<tr>
+<td><button onclick="show('4')">4</button></td>
+<td><button onclick="show('5')">5</button></td>
+<td><button onclick="show('6')">6</button></td>
+<td><button onclick="show('-')">-</button></td>
+</tr>
+<tr>
+<td><button onclick="show('7')">7</button></td>
+<td><button onclick="show('8')">8</button></td>
+<td><button onclick="show('9')">9</button></td>
+<td><button onclick="show('*')">*</button></td>
+</tr>
+<tr>
+<td><button onclick="show('0')">0</button></td>
+<td><button onclick="show('/')">/</button></td>
+<td><button onclick="show('%')">%</button></td>
+<td><button onclick="cal()">=</button></td>
+</tr>
+
+
+</table>
+</body>
+</html>
